@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Women's Jacket - Product Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <style>
+      /* Your Original Header & Footer Styles */
+      body {
+        margin: 0;
+        overflow-x: hidden;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: rgb(11, 11, 40);
+      }
+
+      .firstdiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(11, 11, 40);
+        color: white;
+        margin-top: -1.5px;
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
+
+      #firstheading {
+        margin-left: 10px;
+        font-family:
+          "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+
+      .seconddiv {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        margin-top: 0px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f8f9fa;
+      }
+
+      #firsticons,
+      #searchbar,
+      #lasticons {
+        padding: 10px;
+      }
+
+      #setticon,
+      #profileicon,
+      #carticon,
+      #hearticon,
+      #srchicon {
+        background-color: rgb(11, 11, 40);
+        color: white;
+        padding: 13px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 0 5px;
+      }
+
+      #int {
+        padding: 12px;
+        width: 300px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+      }
+
+      /* Product Detail Page Styles */
+      .product-detail-container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .product-main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .product-images {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .main-image {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .main-image img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 18px;
+      }
+
+      .thumbnail-images {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .thumbnail {
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.3s;
+      }
+
+      .thumbnail.active {
+        border-color: rgb(11, 11, 40);
+      }
+
+      .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product-info {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .product-title {
+        color: rgb(11, 11, 40);
+        font-size: 32px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .product-category {
+        color: #666;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .rating {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .stars {
+        color: #ffd700;
+      }
+
+      .price-section {
+        margin-bottom: 30px;
+      }
+
+      .current-price {
+        font-size: 36px;
+        font-weight: 800;
+        color: rgb(11, 11, 40);
+        margin-right: 15px;
+      }
+
+      .original-price {
+        font-size: 24px;
+        color: #95a5a6;
+        text-decoration: line-through;
+        margin-right: 15px;
+      }
+
+      .discount-badge {
+        background-color: #27ae60;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .description {
+        line-height: 1.8;
+        color: #34495e;
+        /* margin-bottom: 30px; */
+        font-size: 16px;
+        margin-top: 20px;
+        /* border: groove; */
+      }
+
+      .highlighted-features {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: -40px;
+        border-left: 4px solid rgb(11, 11, 40);
+      }
+
+      .highlighted-features h3 {
+        color: rgb(11, 11, 40);
+        margin-bottom: 15px;
+      }
+
+      .feature-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .feature-list li {
+        margin-bottom: 10px;
+        padding-left: 25px;
+        position: relative;
+      }
+
+      .feature-list li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #27ae60;
+        font-weight: bold;
+      }
+
+      /* Stock Management */
+      .stock-management {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .stock-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .stock-title {
+        font-size: 18px;
+        color: rgb(11, 11, 40);
+        font-weight: 600;
+      }
+
+      .stock-count {
+        font-size: 24px;
+        font-weight: 700;
+        color: #27ae60;
+        background: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .stock-controls {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .stock-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        background: rgb(11, 11, 40);
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+      }
+
+      .stock-btn:hover {
+        background: #1a252f;
+        transform: translateY(-3px);
+      }
+
+      .stock-btn:active {
+        transform: translateY(0);
+      }
+
+      .stock-btn.reset {
+        background: #e74c3c;
+        font-size: 16px;
+      }
+
+      .stock-btn.reset:hover {
+        background: #c0392b;
+      }
+
+      .stock-value {
+        font-size: 28px;
+        font-weight: 700;
+        min-width: 60px;
+        text-align: center;
+        color: rgb(11, 11, 40);
+      }
+
+      /* Quantity Selector */
+      .quantity-section {
+        margin-bottom: 25px;
+      }
+
+      .quantity-title {
+        font-size: 18px;
+        color: rgb(11, 11, 40);
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .quantity-controls {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background: white;
+        padding: 15px 25px;
+        border-radius: 15px;
+        width: fit-content;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .quantity-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid rgb(11, 11, 40);
+        background: white;
+        color: rgb(11, 11, 40);
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+      }
+
+      .quantity-btn:hover {
+        background: rgb(11, 11, 40);
+        color: white;
+      }
+
+      .quantity-display {
+        font-size: 32px;
+        font-weight: 700;
+        min-width: 60px;
+        text-align: center;
+        color: rgb(11, 11, 40);
+      }
+
+      /* Discount Code Section */
+      .discount-section {
+        background: rgb(11, 11, 40);
+        padding: 25px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      .discount-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .discount-form {
+        display: flex;
+        gap: 10px;
+      }
+
+      .discount-input {
+        flex: 1;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+      }
+
+      .apply-discount {
+        background: rgb(11, 11, 40);
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 16px;
+        transition: background 0.3s;
+      }
+
+      .apply-discount:hover {
+        background: white;
+        color: rgb(11, 11, 40);
+      }
+
+      .discount-message {
+        margin-top: 10px;
+        font-size: 14px;
+        opacity: 0.9;
+      }
+
+      /* Action Buttons */
+      .action-buttons {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .action-btn {
+        flex: 1;
+        min-width: 200px;
+        padding: 20px 30px;
+        border: none;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+      }
+
+      .add-to-cart-btn {
+        background: rgb(11, 11, 40);
+        color: white;
+      }
+
+      .add-to-cart-btn:hover {
+        background: #1a252f;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(11, 11, 40, 0.3);
+      }
+
+      .buy-now-btn {
+        background: rgb(11, 11, 40);
+        color: white;
+      }
+
+      .buy-now-btn:hover {
+        background: #1a252f;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(11, 11, 40, 0.3);
+      }
+
+      /* Your Original Footer Styles */
+      .footer {
+        background: rgb(11, 11, 40);
+        color: white;
+        padding: 40px 20px 20px;
+        margin-top: 80px;
+      }
+
+      .footer-top {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #34495e;
+      }
+
+      .footer-section h3 {
+        color: #1abc9c;
+        font-size: 18px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #1abc9c;
+        display: inline-block;
+      }
+
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-section ul li a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-section ul li a:hover {
+        color: #1abc9c;
+      }
+
+      .footer-bottom {
+        padding-top: 20px;
+        text-align: center;
+        color: #bdc3c7;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .product-main {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .main-image {
+          height: 300px;
+        }
+
+        .product-title {
+          font-size: 28px;
+        }
+
+        .current-price {
+          font-size: 32px;
+        }
+
+        .action-btn {
+          min-width: 100%;
+        }
+
+        .footer-top {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .stock-controls,
+        .quantity-controls {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .product-detail-container {
+          margin: 20px auto;
+          padding: 15px;
+        }
+
+        .main-image {
+          height: 250px;
+        }
+
+        .product-title {
+          font-size: 24px;
+        }
+
+        .current-price {
+          font-size: 28px;
+        }
+
+        .action-btn {
+          padding: 15px 20px;
+          font-size: 16px;
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr;
+        }
+
+        .discount-form {
+          flex-direction: column;
+        }
+      }
+
+      /* Notification */
+      .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #27ae60;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        display: none;
+        animation: slideIn 0.3s ease;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      /* Original responsive styles for header */
+      @media screen and (max-width: 768px) {
+        .seconddiv {
+          flex-direction: column;
+          gap: 15px;
+          padding: 15px;
+        }
+
+        #searchbar {
+          margin-top: 0;
+        }
+
+        #int {
+          width: 250px;
+        }
+      }
+
+      .copyright {
+        display: flex;
+        /* border: groove; */
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      @media (max-width: 768px) {
+        /* Product main ke flex direction ko column karo */
+        .product-main {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        /* Highlighted features ko hide karo sirf mobile pe */
+        .highlighted-features {
+          display: none;
+        }
+
+        /* Description ko zyada visible karo mobile pe */
+        .description {
+          margin-bottom: 30px;
+          font-size: 15px;
+          line-height: 1.6;
+          padding: 15px;
+          background: #f8f9fa;
+          border-radius: 10px;
+          display: block; /* Ensure it's visible */
+        }
+
+        /* Feature list ko description ke andar show karo */
+        .description::after {
+          content: "";
+          display: block;
+          margin-top: 20px;
+          padding-top: 20px;
+          border-top: 2px solid rgb(11, 11, 40);
+        }
+
+        .description::before {
+          content: "Key Features:";
+          display: block;
+          font-weight: bold;
+          color: rgb(11, 11, 40);
+          margin-bottom: 15px;
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Your Original Header -->
+
+    <!-- Product Detail Content -->
+    <main>
+      <div class="product-detail-container">
+        <div class="product-main">
+          <!-- Product Images -->
+          <div class="product-images">
+            <div class="main-image">
+              <img
+                src="images/women jacket.jpg"
+                alt="Men's Premium Sneakers"
+                id="mainImage"
+              />
+            </div>
+
+            <div class="highlighted-features">
+              <h3>Product Features:</h3>
+              <ul class="feature-list">
+                <li>
+                  Premium Material – High-quality wool blend or fine leather
+                </li>
+                <li>Tailored Fit – Flattering, structured silhouette</li>
+                <li>
+                  Durable Construction – Reinforced seams and sturdy lining
+                </li>
+                <li>
+                  Secure Closure – Smooth zipper or elegant button detailing
+                </li>
+                <li>Classic Lapel – Timeless collar design face</li>
+                <li>Functional Pockets – Practical and stylish placement</li>
+                <li>Easy Care – Wrinkle and stain-resistant fabric</li>
+                <li>Versatile Style – From office chic to weekend casual</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Product Information -->
+          <div class="product-info">
+            <h1 class="product-title">Women's Jacket</h1>
+            <p class="product-category">
+              Jacket / Outerwear / Women's Leather Jacket
+            </p>
+
+            <div class="rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span>4.5 (163 Reviews)</span>
+            </div>
+
+            <div class="price-section">
+              <span class="current-price" id="currentPrice">$89.99</span>
+              <span class="original-price">$99.99</span>
+              <span class="discount-badge">25% OFF</span>
+            </div>
+
+            <!-- Quantity Selector -->
+            <div class="quantity-section">
+              <h3 class="quantity-title">Select Quantity</h3>
+              <div class="quantity-controls">
+                <button class="quantity-btn" onclick="changeQuantity(-1)">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <span class="quantity-display" id="quantity">1</span>
+                <button class="quantity-btn" onclick="changeQuantity(1)">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+            <!-- Discount -->
+            <div class="discount-section">
+              <h3 class="discount-title">
+                <i class="fas fa-tag"></i> Apply Discount Code
+              </h3>
+              <div class="discount-form">
+                <input
+                  type="text"
+                  class="discount-input"
+                  id="discountCode"
+                  placeholder="Enter code: WJACK10"
+                />
+                <button class="apply-discount" onclick="applyDiscount()">
+                  Apply
+                </button>
+              </div>
+              <p class="discount-message">
+                Use code "WJACK10" for 10% discount
+              </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+              <button class="action-btn add-to-cart-btn" onclick="addToCart()">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+              <button class="action-btn buy-now-btn" onclick="buyNow()">
+                <i class="fas fa-bolt"></i> Buy Now
+              </button>
+            </div>
+
+            <div class="copyright">
+              <h5>Copyright © 2026 All Rights Reserved | E-commerce Website</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <script>
+      // Product Images Array
+      const productImages = ["men's shoes.jpg"];
+
+      // Initialize variables
+      let originalPrice = 89.99;
+      let currentPrice = 89.99;
+      let stock = 50;
+      let quantity = 1;
+      let discountApplied = false;
+
+      // Change main image
+      function changeImage(index) {
+        const mainImage = document.getElementById("mainImage");
+        const thumbnails = document.querySelectorAll(".thumbnail");
+
+        mainImage.src = productImages[index];
+
+        // Update active thumbnail
+        thumbnails.forEach((thumb, i) => {
+          if (i === index) {
+            thumb.classList.add("active");
+          } else {
+            thumb.classList.remove("active");
+          }
+        });
+      }
+
+      // Stock management
+      function changeStock(amount) {
+        stock += amount;
+
+        // Ensure stock doesn't go below 0
+        if (stock < 0) {
+          stock = 0;
+          showNotification("Stock cannot be less than 0", true);
+        }
+
+        // Update stock displays
+        document.getElementById("stockCount").textContent = stock;
+        document.getElementById("stockValue").textContent = stock;
+
+        // If stock is low, show warning
+        if (stock <= 10 && stock > 0) {
+          showNotification(`Low stock! Only ${stock} items remaining.`, true);
+        }
+
+        // If stock is 0, disable quantity buttons
+        updateQuantityControls();
+      }
+
+      // Reset stock to original amount
+      function resetStock() {
+        stock = 50;
+        document.getElementById("stockCount").textContent = stock;
+        document.getElementById("stockValue").textContent = stock;
+        showNotification("Stock reset to 50 units");
+        updateQuantityControls();
+      }
+
+      // Change purchase quantity
+      function changeQuantity(amount) {
+        quantity += amount;
+
+        // Ensure quantity is between 1 and stock
+        if (quantity < 1) quantity = 1;
+        if (quantity > stock) {
+          quantity = stock;
+          showNotification(
+            `Cannot order more than available stock (${stock})`,
+            true,
+          );
+        }
+
+        document.getElementById("quantity").textContent = quantity;
+      }
+
+      // Update quantity controls based on stock
+      function updateQuantityControls() {
+        const quantityBtns = document.querySelectorAll(".quantity-btn");
+
+        if (stock === 0) {
+          quantityBtns.forEach((btn) => {
+            btn.style.opacity = "0.5";
+            btn.style.cursor = "not-allowed";
+            btn.disabled = true;
+          });
+          document.getElementById("quantity").textContent = "0";
+          quantity = 0;
+        } else {
+          quantityBtns.forEach((btn) => {
+            btn.style.opacity = "1";
+            btn.style.cursor = "pointer";
+            btn.disabled = false;
+          });
+
+          // If quantity is more than stock, adjust it
+          if (quantity > stock) {
+            quantity = stock;
+            document.getElementById("quantity").textContent = quantity;
+          }
+        }
+      }
+
+      // Apply discount
+      function applyDiscount() {
+        const discountCode = document
+          .getElementById("discountCode")
+          .value.trim()
+          .toUpperCase();
+
+        if (discountCode === "WJACK10") {
+          if (!discountApplied) {
+            currentPrice = originalPrice * 0.9; // 10% discount
+            document.getElementById("currentPrice").textContent =
+              `$${currentPrice.toFixed(2)}`;
+            discountApplied = true;
+            showNotification("10% discount applied successfully!");
+          } else {
+            showNotification("Discount already applied!", true);
+          }
+        } else {
+          showNotification("Invalid discount code!", true);
+        }
+      }
+
+      // Add to cart
+      function addToCart() {
+        if (stock === 0) {
+          showNotification("Product is out of stock!", true);
+          return;
+        }
+
+        if (quantity === 0) {
+          showNotification("Please select at least 1 item", true);
+          return;
+        }
+
+        const totalPrice = (currentPrice * quantity).toFixed(2);
+        showNotification(
+          `Added ${quantity} × Men's Premium Sneakers to cart! Total: $${totalPrice}`,
+        );
+
+        // In a real application, you would update the cart here
+        console.log(`Added ${quantity} items to cart. Total: $${totalPrice}`);
+      }
+
+      // Buy now
+      function buyNow() {
+        if (stock === 0) {
+          showNotification("Product is out of stock!", true);
+          return;
+        }
+
+        if (quantity === 0) {
+          showNotification("Please select at least 1 item", true);
+          return;
+        }
+
+        const totalPrice = (currentPrice * quantity).toFixed(2);
+
+        if (
+          confirm(
+            `Proceed to checkout with ${quantity} × Men's Premium Sneakers?\nTotal: $${totalPrice}`,
+          )
+        ) {
+          // Reduce stock
+          stock -= quantity;
+          document.getElementById("stockCount").textContent = stock;
+          document.getElementById("stockValue").textContent = stock;
+
+          // Reset purchase quantity
+          quantity = 1;
+          document.getElementById("quantity").textContent = quantity;
+
+          showNotification(`Purchase successful! Order total: $${totalPrice}`);
+
+          // Update controls
+          updateQuantityControls();
+        }
+      }
+
+      // Show notification
+      function showNotification(message, isError = false) {
+        const notification = document.getElementById("notification");
+        notification.textContent = message;
+
+        if (isError) {
+          notification.style.backgroundColor = "#e74c3c";
+        } else {
+          notification.style.backgroundColor = "#27ae60";
+        }
+
+        notification.style.display = "block";
+
+        // Hide notification after 3 seconds
+        setTimeout(() => {
+          notification.style.display = "none";
+        }, 3000);
+      }
+
+      // Initialize on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        updateQuantityControls();
+      });
+    </script>
+  </body>
+</html>
