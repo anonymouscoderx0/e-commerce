@@ -1,0 +1,3626 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .firstdiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background-color: rgb(11, 11, 40);
+      color: white;
+      margin-top: -1.5px;
+      box-sizing: border-box;
+    }
+
+    #firstheading {
+      margin-left: 10px;
+      font-family:
+        "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+
+    .seconddiv {
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      margin-top: 0px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #firsticons {
+      padding: 10px;
+      margin-top: -20px;
+    }
+
+    #searchbar {
+      padding: 10px;
+      margin-top: 50px;
+    }
+
+    #lasticons {
+      padding: 10px;
+      margin-top: -20px;
+    }
+
+    #setticon {
+      background-color: rgb(11, 11, 40);
+      color: white;
+      padding: 13px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #profileicon {
+      background-color: rgb(11, 11, 40);
+      color: white;
+      padding: 13px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #carticon {
+      background-color: rgb(11, 11, 40);
+      color: white;
+      border-radius: 4px;
+      padding: 13px;
+      cursor: pointer;
+    }
+
+    #hearticon {
+      background-color: rgb(11, 11, 40);
+      color: white;
+      border-radius: 4px;
+      padding: 13px;
+      cursor: pointer;
+    }
+
+    #srchicon {
+      background-color: rgb(11, 11, 40);
+      color: white;
+      border-radius: 4px;
+      padding: 13px;
+      cursor: pointer;
+    }
+
+    #int {
+      padding: 20px;
+      width: 350px;
+      height: 8px;
+      margin-left: 29px;
+      border-radius: 10px;
+    }
+
+    /* 📱 Mobile (max-width: 768px) */
+    @media screen and (max-width: 768px) {
+      .seconddiv {
+        padding: 10px;
+      }
+
+      #int {
+        width: 250px;
+        padding: 12px;
+        height: 5px;
+        margin-left: 15px;
+      }
+
+      #setticon,
+      #profileicon,
+      #carticon,
+      #hearticon,
+      #srchicon {
+        padding: 8px;
+        font-size: 14px;
+      }
+
+      #firstheading {
+        font-size: 14px;
+      }
+    }
+
+    /* 📱 Small Mobile (max-width: 480px) */
+    @media screen and (max-width: 480px) {
+      .seconddiv {
+        padding: 8px;
+      }
+
+      #int {
+        width: 180px;
+        padding: 10px;
+        height: 4px;
+        margin-left: 10px;
+      }
+
+      #setticon,
+      #profileicon,
+      #carticon,
+      #hearticon,
+      #srchicon {
+        padding: 6px;
+        font-size: 12px;
+      }
+
+      #firstheading {
+        font-size: 12px;
+      }
+
+      #iconshop {
+        font-size: 18px;
+      }
+    }
+
+    /* 📱 Extra Small (max-width: 360px) */
+    @media screen and (max-width: 360px) {
+      #int {
+        width: 150px;
+        padding: 8px;
+        height: 3px;
+        margin-left: 5px;
+      }
+
+      #setticon,
+      #profileicon,
+      #carticon,
+      #hearticon,
+      #srchicon {
+        padding: 4px;
+        font-size: 10px;
+      }
+
+      #firstheading {
+        font-size: 11px;
+      }
+
+      .seconddiv {
+        padding: 5px;
+      }
+    }
+
+    /* 💻 Tablet (max-width: 1024px) */
+    @media screen and (max-width: 1024px) {
+      .seconddiv {
+        padding: 15px;
+      }
+
+      #int {
+        width: 300px;
+      }
+    }
+
+    /* 📱 Fixed for 632px width */
+    @media screen and (max-width: 632px) {
+      .seconddiv {
+        flex-wrap: nowrap !important;
+        padding: 8px;
+        gap: 5px !important;
+        align-items: center !important;
+        overflow: hidden !important;
+      }
+
+      #searchbar {
+        flex-grow: 1;
+        min-width: 150px !important;
+        max-width: 200px !important;
+        display: flex;
+        justify-content: center;
+        margin-top: 0 !important;
+      }
+
+      #int {
+        width: 100% !important;
+        max-width: 180px !important;
+        min-width: 100px !important;
+        margin-left: 10px;
+        padding: 8px !important;
+        height: 4px !important;
+      }
+
+      #firsticons,
+      #lasticons {
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+
+      #setticon,
+      #profileicon,
+      #carticon,
+      #hearticon,
+      #srchicon {
+        padding: 6px !important;
+        font-size: 12px !important;
+      }
+    }
+
+    /* 📱 Very small screens */
+    @media screen and (max-width: 480px) {
+      .seconddiv {
+        gap: 3px !important;
+        padding: 5px;
+        justify-content: space-between !important;
+      }
+
+      #int {
+        width: 100% !important;
+        font-size: 10px;
+        max-width: 150px !important;
+        min-width: 80px !important;
+        padding: 6px !important;
+        height: 3px !important;
+        margin-left: 3px !important;
+      }
+
+      #setticon,
+      #profileicon,
+      #carticon,
+      #hearticon,
+      #srchicon {
+        padding: 4px !important;
+        font-size: 10px !important;
+      }
+    }
+
+    /* 📱 Extra Small (max-width: 360px) */
+    @media screen and (max-width: 360px) {
+      .seconddiv {
+        padding: 3px 1px !important;
+        gap: 2px !important;
+      }
+
+      #int {
+        width: 100% !important;
+        max-width: 100px !important;
+        min-width: 60px !important;
+        padding: 4px !important;
+        height: 2px !important;
+        margin-left: 1px !important;
+      }
+
+      #setticon,
+      #profileicon,
+      #carticon,
+      #hearticon,
+      #srchicon {
+        padding: 3px !important;
+        font-size: 8px !important;
+      }
+    }
+
+    /* 📱 Very small screens */
+    @media screen and (max-width: 480px) {
+      .seconddiv {
+        gap: 8px;
+        padding: 5px;
+      }
+
+      #int {
+        width: 100%;
+        max-width: 200px;
+        min-width: 120px;
+        padding: 10px;
+        margin-left: 5px;
+      }
+
+      #setticon,
+      #profileicon,
+      #carticon,
+      #hearticon,
+      #srchicon {
+        padding: 5px;
+        font-size: 11px;
+      }
+    }
+
+    /* 📱 401px SE KAM PAR WHITE SPACE FIX */
+    @media screen and (max-width: 401px) {
+      .firstdiv {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 5px 0 !important;
+        border-left: none !important;
+        border-right: none !important;
+        justify-content: center;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        overflow-x: hidden;
+      }
+    }
+
+    /* 📱 CHOTI SCREENS KE LIYE */
+    @media screen and (max-width: 350px) {
+      .firstdiv {
+        padding: 5px 0 !important;
+      }
+    }
+
+    /* threedivs responsive */
+
+    /* Main Container */
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 70px;
+    }
+
+    /* Column Styles */
+    .column {
+      flex: 1;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .column:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgb(11, 11, 40);
+    }
+
+    #cartbtn {
+      padding: 15px;
+      cursor: pointer;
+      background-color: rgb(11, 11, 40);
+      color: white;
+      border-radius: 10px;
+      font-family:
+        "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      margin: 5px;
+    }
+
+    /* Price Display */
+    .product-price {
+      color: rgb(11, 11, 40);
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+      text-align: center;
+      background: #f5f5f5;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+      align-self: center;
+      /* margin-top: -5px; */
+    }
+
+    /* Image Container */
+    .image-container {
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .column:hover .image-container img {
+      transform: scale(1.05);
+    }
+
+    /* Content Container */
+    .content-container {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      align-items: center;
+    }
+
+    .content-container h3 {
+      color: rgb(11, 11, 40);
+      font-size: 1.4rem;
+      margin-top: -5px;
+      font-weight: 600;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+    }
+
+    .content-container p {
+      color: rgb(11, 11, 40);
+      margin-top: -10px;
+      font-size: 0.95rem;
+      flex-grow: 1;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    /* Features */
+    .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .features span {
+      background: #f0f7ff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: #3498db;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .features i {
+      color: #27ae60;
+    }
+
+    /* Responsive Design */
+
+    /* Tablet (768px to 1024px) */
+    @media (max-width: 1024px) {
+      .main-container {
+        gap: 20px;
+        padding: 15px;
+      }
+
+      .image-container {
+        height: 220px;
+      }
+
+      .content-container {
+        padding: 20px;
+      }
+
+      .content-container h3 {
+        font-size: 1.3rem;
+      }
+    }
+
+    /* Mobile (max-width: 768px) */
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+        gap: 25px;
+        max-width: 600px;
+      }
+
+      .column {
+        width: 100%;
+      }
+
+      .image-container {
+        height: 200px;
+      }
+
+      .content-container h3 {
+        font-size: 1.2rem;
+      }
+
+      .content-container p {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Small Mobile (max-width: 480px) */
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      .main-container {
+        padding: 10px;
+        gap: 20px;
+      }
+
+      .image-container {
+        height: 180px;
+      }
+
+      .content-container {
+        padding: 15px;
+      }
+
+      .content-container h3 {
+        font-size: 1.1rem;
+      }
+
+      .features {
+        justify-content: center;
+      }
+    }
+
+    /* Extra Small (max-width: 360px) */
+    @media (max-width: 360px) {
+      .image-container {
+        height: 150px;
+      }
+
+      .content-container {
+        padding: 12px;
+      }
+
+      .content-container h3 {
+        font-size: 1rem;
+      }
+
+      .content-container p {
+        font-size: 0.85rem;
+      }
+
+      .features span {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+      }
+    }
+
+    /* Optional: Add a nice gradient background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      z-index: -1;
+      opacity: 0.05;
+    }
+
+    .footer {
+      background: rgb(11, 11, 40);
+      color: white;
+      padding: 40px 20px 20px;
+      margin-top: 200px;
+    }
+
+    /* Footer Top Section */
+    .footer-top {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #34495e;
+    }
+
+    .footer-section h3 {
+      color: #1abc9c;
+      font-size: 18px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #1abc9c;
+      display: inline-block;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+      display: flex;
+      font-family:
+        "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-section ul li a:hover {
+      color: #1abc9c;
+      padding-left: 5px;
+    }
+
+    .footer-section ul li a i {
+      font-size: 12px;
+    }
+
+    /* Contact Info */
+    .contact-info p {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      font-family:
+        "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+
+    /* Social Icons */
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      background: #34495e;
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: #1abc9c;
+      transform: translateY(-3px);
+    }
+
+    /* Newsletter */
+    .footer-middle {
+      padding: 30px 0;
+      border-bottom: 1px solid #34495e;
+    }
+
+    .newsletter {
+      text-align: center;
+    }
+
+    .newsletter h3 {
+      color: #1abc9c;
+      margin-bottom: 10px;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+
+    .newsletter p {
+      color: white;
+      font-family:
+        "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      max-width: 500px;
+      margin: 0 auto;
+      gap: 10px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .newsletter-form button {
+      background: #1abc9c;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .newsletter-form button:hover {
+      background: #16a085;
+    }
+
+    /* Footer Bottom */
+    .footer-bottom {
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .payment-methods {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: white;
+      font-family:
+        "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+
+    .payment-methods i {
+      font-size: 24px;
+      color: white;
+    }
+
+    .copyright p {
+      color: white;
+      font-family:
+        "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      font-size: 14px;
+    }
+
+    .download-app {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: white;
+      font-family:
+        "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+
+    .download-app a {
+      color: white;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    .download-app a:hover {
+      color: #16a085;
+    }
+
+    /* WhatsApp Float Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+    }
+
+    .whatsapp-float a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s;
+    }
+
+    .whatsapp-float a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    }
+
+    /* ============ RESPONSIVE DESIGN ============ */
+
+    /* Tablet */
+    @media (max-width: 992px) {
+      .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+      }
+
+      .payment-methods,
+      .download-app {
+        justify-content: center;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .footer {
+        padding: 30px 15px 15px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-section {
+        text-align: center;
+      }
+
+      .footer-section ul li a {
+        margin-left: 50px;
+      }
+
+      .contact-info p {
+        justify-content: center;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form button {
+        width: 70%;
+        margin-left: 80px;
+      }
+
+      .newsletter-form input {
+        width: 80%;
+        margin-left: 40px;
+      }
+
+      .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .whatsapp-float a {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+      }
+    }
+
+    /* Small Mobile */
+    @media (max-width: 480px) {
+      .footer-top {
+        gap: 25px;
+      }
+
+      .footer-section h3 {
+        font-size: 16px;
+      }
+
+      .payment-methods,
+      .download-app {
+        flex-wrap: wrap;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form button {
+        width: 70%;
+        margin-left: 120px;
+        width: 120px;
+      }
+
+      .newsletter-form input {
+        width: 80%;
+        margin-left: 80px;
+        width: 180px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .newsletter-form button {
+        width: 70%;
+        margin-left: 100px;
+        width: 120px;
+      }
+
+      .newsletter-form input {
+        width: 80%;
+        margin-left: 50px;
+        width: 180px;
+      }
+    }
+
+    /* Filter Modal Styles */
+    .filter-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .filter-modal.active {
+      display: flex;
+    }
+
+    .filter-content {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .filter-content h3 {
+      margin-top: 0;
+      color: rgb(11, 11, 40);
+      text-align: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .filter-option {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      margin: 10px 0;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .filter-option:hover {
+      border-color: rgb(11, 11, 40);
+      background: #f5f5f5;
+    }
+
+    .filter-option.active {
+      border-color: rgb(11, 11, 40);
+      background: rgba(11, 11, 40, 0.1);
+    }
+
+    .filter-option input {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
+    .filter-option label {
+      flex: 1;
+      cursor: pointer;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .filter-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      flex: 1;
+    }
+
+    .apply-filter {
+      background: rgb(11, 11, 40);
+      color: white;
+    }
+
+    .clear-filter {
+      background: #ddd;
+      color: #333;
+    }
+
+    .filter-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Reset Filter Button in Header */
+    .reset-filter-btn {
+      background: #ff4444;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-left: 10px;
+      display: none;
+    }
+
+    /* lllll */
+
+    /* Cart Sidebar Styles */
+    .cart-sidebar {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 350px;
+      height: 100vh;
+      background: white;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      transition: right 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart-sidebar.active {
+      right: 0;
+    }
+
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: rgb(11, 11, 40);
+      color: white;
+    }
+
+    .cart-header h3 {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .close-cart {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .close-cart:hover {
+      color: #1abc9c;
+    }
+
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 15px;
+    }
+
+    .empty-cart {
+      text-align: center;
+      padding: 50px 20px;
+      color: #888;
+    }
+
+    .empty-cart i {
+      font-size: 48px;
+      margin-bottom: 15px;
+      color: #ddd;
+    }
+
+    .empty-cart p {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    /* Cart Item Styles */
+    .cart-item {
+      display: flex;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+      gap: 15px;
+      align-items: center;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    /* Chrome/Safari/Opera ke liye */
+    .cart-items::-webkit-scrollbar {
+      display: none; /* YEH LINE ADD KAREIN */
+    }
+
+    .cart-item-image {
+      width: 70px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .cart-item-details {
+      flex: 1;
+    }
+
+    .cart-item-title {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .cart-item-price {
+      color: rgb(11, 11, 40);
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .cart-item-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .quantity-control {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f5f5f5;
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+
+    .quantity-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: rgb(11, 11, 40);
+    }
+
+    .quantity-btn:hover {
+      background: #ddd;
+    }
+
+    .quantity-value {
+      min-width: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .delete-item {
+      background: none;
+      border: none;
+      color: #ff4444;
+      cursor: pointer;
+      font-size: 20px;
+      padding: 5px;
+    }
+
+    .delete-item:hover {
+      color: #cc0000;
+    }
+
+    .buy-now-btn {
+      background: #27ae60;
+      color: white;
+      border: none;
+      padding: 5px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .buy-now-btn:hover {
+      background: #219653;
+    }
+
+    /* Cart Footer */
+    .cart-footer {
+      padding: 20px;
+      border-top: 1px solid #eee;
+      background: #f9f9f9;
+      height: 15px;
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .total-price {
+      color: rgb(11, 11, 40);
+      font-size: 20px;
+    }
+
+    .checkout-btn {
+      display: none;
+      /* width: 100%;
+      padding: 15px; */
+      border: none;
+      /* border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s; */
+      background: white;
+    }
+
+    .checkout-btn:hover {
+      background: #1abc9c;
+    }
+
+    /* Cart Overlay */
+    .cart-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      display: none;
+    }
+
+    .cart-overlay.active {
+      display: block;
+    }
+
+    /* Responsive Cart */
+    @media (max-width: 768px) {
+      .cart-sidebar {
+        width: 100%;
+        right: -100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cart-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .cart-item-actions {
+        justify-content: center;
+      }
+    }
+
+    #sidebarcop {
+      margin-left: 25px;
+      margin-top: -14px;
+    }
+
+    .cartbtn {
+      padding: 15px;
+      cursor: pointer;
+      background-color: rgb(11, 11, 40);
+      color: white;
+      border-radius: 10px;
+      font-family:
+        "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+
+    /* 📱 Fixed for 632px width */
+    @media screen and (max-width: 632px) {
+      .seconddiv {
+        flex-wrap: nowrap !important;
+        padding: 8px;
+        gap: 5px !important;
+        align-items: center !important;
+        overflow: hidden !important;
+        /* Naye changes yahan */
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        height: auto;
+      }
+
+      #searchbar {
+        flex-grow: 1;
+        min-width: 150px !important;
+        max-width: 500px !important;
+        display: flex;
+        justify-content: center;
+        margin-top: 0 !important;
+        /* Naye changes yahan */
+        align-items: center;
+        order: 2; /* Searchbar ko beech mein laye */
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      #int {
+        width: 200% !important;
+        max-width: 200px !important;
+        min-width: 100px !important;
+        margin-left: 10px;
+        padding: 20px !important;
+        height: 6px !important;
+        /* Naye changes yahan */
+        margin-top: 0 !important;
+        align-self: center;
+      }
+
+      #firsticons {
+        flex-shrink: 0;
+        white-space: nowrap;
+        order: 1; /* Left icons ko left side */
+        margin-top: 0 !important;
+      }
+
+      #lasticons {
+        flex-shrink: 0;
+        white-space: nowrap;
+        order: 3; /* Right icons ko right side */
+        margin-top: 0 !important;
+      }
+
+      #srchicon {
+        /* Search icon ko input ke saath align karein */
+        height: auto;
+        align-self: center;
+        margin-top: 0 !important;
+        margin-left: 5px;
+      }
+
+      #setticon,
+      #profileicon,
+      #carticon,
+      #hearticon,
+      #srchicon {
+        padding: 6px !important;
+        font-size: 12px !important;
+        margin-top: 0 !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px; /* Fixed height for all icons */
+        width: 32px; /* Fixed width for all icons */
+      }
+      #setticon {
+        margin-bottom: 10px;
+      }
+
+      #carticon {
+        margin-bottom: 10px;
+      }
+    }
+
+    /* 📱 Fixed for 768px width */
+    @media screen and (max-width: 768px) {
+      #searchbar {
+        align-items: center;
+      }
+
+      #int {
+        width: 400px;
+        height: 20px;
+      }
+    }
+
+    /* 📱 Fixed for 712px width */
+    @media screen and (max-width: 712px) {
+      #searchbar {
+        align-items: center;
+        padding-left: 0px;
+      }
+
+      #int {
+        width: 250px;
+        height: 20px;
+      }
+    }
+
+    #appstr {
+      margin-left: -14px;
+    }
+
+    .lightcheck {
+      background-color: white;
+    }
+
+    .darkcheck {
+      background-color: black;
+    }
+  </style>
+  <body>
+    <header>
+      <div class="firstdiv">
+        <i id="iconshop" class="fa-solid fa-bag-shopping"></i>
+        <h5 id="firstheading">The Best E-commerce Website</h5>
+        <button class="reset-filter-btn" id="resetFilterBtn">
+          Reset Filter
+        </button>
+      </div>
+
+      <div class="seconddiv">
+        <div id="firsticons">
+          <i id="setticon" class="fa-solid fa-sliders"></i>
+          <i id="profileicon" class="fa-solid fa-user"></i>
+        </div>
+        <div id="searchbar">
+          <input
+            id="int"
+            type="Search Products"
+            placeholder="Search Products"
+          />
+          <i id="srchicon" class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div id="lasticons">
+          <i id="carticon" class="fa-solid fa-cart-shopping"></i>
+          <i id="hearticon" class="fa-solid fa-circle-half-stroke"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Filter Modal -->
+      <div class="filter-modal" id="filterModal">
+        <div class="filter-content">
+          <h3><i class="fas fa-filter"></i> Filter Products by Price</h3>
+
+          <div class="filter-option" id="below60Option">
+            <input type="radio" id="below60" name="filter" value="below60" />
+            <label for="below60">Prices below $60</label>
+          </div>
+
+          <div class="filter-option" id="above60Option">
+            <input type="radio" id="above60" name="filter" value="above60" />
+            <label for="above60">Prices above $60</label>
+          </div>
+
+          <div class="filter-option" id="allProductsOption">
+            <input type="radio" id="all" name="filter" value="all" checked />
+            <label for="all">Show All Products</label>
+          </div>
+
+          <div class="filter-buttons">
+            <button class="filter-btn clear-filter" id="clearFilter">
+              Clear
+            </button>
+            <button class="filter-btn apply-filter" id="applyFilter">
+              Apply Filter
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- first row -->
+      <div class="main-container" id="productsContainer">
+        <!-- Column 1 -->
+        <div id="clm1" class="column" data-price="59.99">
+          <div class="image-container">
+            <img src="images/men's shoes.jpg" alt="Men's Shoe" />
+          </div>
+          <div class="content-container">
+            <h3>Men's Shoe</h3>
+            <div class="product-price">$59.99</div>
+            <p>
+              Comfortable everyday sneakers perfect for casual wear with modern
+              style.
+            </p>
+            <div class="features">
+              <button class="cartbtn">Add To Cart</button>
+              <button
+                onclick="window.location.href = 'Men%27s%20Shoe%20Details.html'"
+                class="cartbtn"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div id="clm2" class="column" data-price="29.99">
+          <div class="image-container">
+            <img src="images/men's shirt.webp" alt="Men's Shirt" />
+          </div>
+          <div class="content-container">
+            <h3>Men's Shirt</h3>
+            <div class="product-price">$29.99</div>
+            <p>
+              Comfortable knit shirts with collar, perfect for smart-casual
+              occasions.
+            </p>
+            <div class="features">
+              <button class="cartbtn">Add To Cart</button>
+              <button
+                class="cartbtn"
+                onclick="
+                  window.location.href = 'Men%27s%20Shirt%20Details.html'
+                "
+                class="cartbtn"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div id="clm3" class="column" data-price="129.99">
+          <div class="image-container">
+            <img src="images/men's watch.webp" alt="Men's Watch" />
+          </div>
+          <div class="content-container">
+            <h3>Men's Watch</h3>
+            <div class="product-price">$129.99</div>
+            <p>
+              Premium watches with gold plating for special occasions and
+              status.
+            </p>
+            <div class="features">
+              <button class="cartbtn">Add To Cart</button>
+              <button
+                class="cartbtn"
+                onclick="
+                  window.location.href = 'Men%27s%20Watch%20Details.html'
+                "
+                class="cartbtn"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- second row -->
+      <div class="main-container">
+        <!-- Column 4 -->
+        <div id="clm4" class="column" data-price="79.99">
+          <div class="image-container">
+            <img src="images/Men's Leather Jacket.jpg" alt="Men's Jacket" />
+          </div>
+          <div class="content-container">
+            <h3>Men's Jacket</h3>
+            <div class="product-price">$79.99</div>
+            <p>Timeless casual jackets in durable denim for everyday wear.</p>
+            <div class="features">
+              <button class="cartbtn">Add To Cart</button>
+              <button
+                class="cartbtn"
+                onclick="
+                  window.location.href = 'Men%27s%20Jacket%20Details.html'
+                "
+                class="cartbtn"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 5 -->
+        <div id="clm5" class="column" data-price="19.99">
+          <div class="image-container">
+            <img src="images/men's cap.jpg" alt="Men's Cap" />
+          </div>
+          <div class="content-container">
+            <h3>Men's Cap</h3>
+            <div class="product-price">$19.99</div>
+            <p>Soft fabric hats with downward brim for sun protection style.</p>
+            <div class="features">
+              <button class="cartbtn">Add To Cart</button>
+              <button
+                class="cartbtn"
+                onclick="window.location.href = 'Men%27s%20Cap%20Details.html'"
+                class="cartbtn"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 6 -->
+        <div id="clm6" class="column" data-price="49.99">
+          <div class="image-container">
+            <img src="images/men's perfume.jpg" alt="Men's Perfume" />
+          </div>
+          <div class="content-container">
+            <h3>Men's Perfume</h3>
+            <div class="product-price">$49.99</div>
+            <p>Rich and intense fragrance for special nights out.</p>
+            <div class="features">
+              <button class="cartbtn">Add To Cart</button>
+              <button
+                class="cartbtn"
+                onclick="
+                  window.location.href = 'Men%27s%20Perfume%20Details.html'
+                "
+                class="cartbtn"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- third row -->
+      <div class="main-container">
+        <!-- Column 7 -->
+        <div id="clm7" class="column" data-price="69.99">
+          <div class="image-container">
+            <img src="images/women shoes.jpg" alt="Women's Shoe" />
+          </div>
+          <div class="content-container">
+            <h3>Women's Shoe</h3>
+            <div class="product-price">$69.99</div>
+            <p>Comfortable heels for all-day wear and stability.</p>
+            <div class="features">
+              <button class="cartbtn">Add To Cart</button>
+              <button
+                class="cartbtn"
+                onclick="
+                  window.location.href = 'Women%27s%20Shoe%20Details.html'
+                "
+                class="cartbtn"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 8 -->
+        <div id="clm8" class="column" data-price="34.99">
+          <div class="image-container">
+            <img src="images/women clothing.webp" alt="Women's Shirt" />
+          </div>
+          <div class="content-container">
+            <h3>Women's Shirt</h3>
+            <div class="product-price">$34.99</div>
+            <p>Durable stylish shirts for trendy laid-back weekend outfits.</p>
+            <div class="features">
+              <button class="cartbtn">Add To Cart</button>
+              <button
+                class="cartbtn"
+                onclick="
+                  window.location.href = 'Women%27s%20Shirt%20Details.html'
+                "
+                class="cartbtn"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 9 -->
+        <div id="clm9" class="column" data-price="149.99">
+          <div class="image-container">
+            <img src="images/women watch.webp" alt="Women's Watch" />
+          </div>
+          <div class="content-container">
+            <h3>Women's Watch</h3>
+            <div class="product-price">$149.99</div>
+            <p>
+              Elegant watches with crystal embellishments for special occasions.
+            </p>
+            <div class="features">
+              <button class="cartbtn">Add To Cart</button>
+              <button
+                class="cartbtn"
+                onclick="
+                  window.location.href = 'Women%27s%20Watch%20Details.html'
+                "
+                class="cartbtn"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- fourth row -->
+      <div class="main-container">
+        <!-- Column 10 -->
+        <div id="clm10" class="column" data-price="89.99">
+          <div class="image-container">
+            <img src="images/women jacket.jpg" alt="Women's Jacket" />
+          </div>
+          <div class="content-container">
+            <h3>Women's Jacket</h3>
+            <div class="product-price">$89.99</div>
+            <p>Classic casual jacket perfect for everyday layered outfits.</p>
+            <div class="features">
+              <button class="cartbtn">Add To Cart</button>
+              <button
+                class="cartbtn"
+                onclick="
+                  window.location.href = 'Women%27s%20Jacket%20Details.html'
+                "
+                class="cartbtn"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 11 -->
+        <div id="clm11" class="column" data-price="24.99">
+          <div class="image-container">
+            <img src="images/women cp.jpeg" alt="Women's Cap" />
+          </div>
+          <div class="content-container">
+            <h3>Women's Cap</h3>
+            <div class="product-price">$24.99</div>
+            <p>Twist-front caps for fashionable ethnic-inspired looks.</p>
+            <div class="features">
+              <button class="cartbtn">Add To Cart</button>
+              <button
+                class="cartbtn"
+                onclick="
+                  window.location.href = 'Women%27s%20Cap%20Details.html'
+                "
+                class="cartbtn"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 12 -->
+        <div id="clm12" class="column" data-price="54.99">
+          <div class="image-container">
+            <img src="images/women perfume.webp" alt="Women's Perfume" />
+          </div>
+          <div class="content-container">
+            <h3>Women's Perfume</h3>
+            <div class="product-price">$54.99</div>
+            <p>Warm comforting fragrance with sweet dessert notes.</p>
+            <div class="features">
+              <button class="cartbtn">Add To Cart</button>
+              <button
+                class="cartbtn"
+                onclick="
+                  window.location.href = 'Women%27s%20Perfume%20Details.html'
+                "
+                class="cartbtn"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart Sidebar -->
+      <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+          <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+          <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+          <!-- Cart items will be added here dynamically -->
+          <div class="empty-cart" id="emptyCart">
+            <i class="fas fa-shopping-basket"></i>
+            <p>Your cart is empty</p>
+          </div>
+        </div>
+
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span></span>
+            <span class="total-price" id="totalPrice"></span>
+          </div>
+          <button class="checkout-btn" id="checkoutBtn"></button>
+          <p class="cartfoot" id="sidebarcop">
+            Copyright &copy; 2026 All Rights Reserved
+          </p>
+        </div>
+      </div>
+
+      <!-- Cart Overlay -->
+      <div class="cart-overlay" id="cartOverlay"></div>
+    </main>
+
+    <footer class="footer">
+      <!-- Top Section -->
+      <div class="footer-top">
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Home</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Shop</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Categories</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Deals</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> New Arrivals</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <ul>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Contact Us</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> FAQ</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chevron-right"></i> Shipping Policy</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chevron-right"></i> Return & Exchange</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chevron-right"></i> Privacy Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Account</h3>
+          <ul>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> My Account</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chevron-right"></i> Order Tracking</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Wishlist</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Cart</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Checkout</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Sialkot , Pakistan</p>
+            <p><i class="fas fa-phone"></i> +92 343 0106881</p>
+            <p><i class="fas fa-envelope"></i> wasifhussainx@gmail.com</p>
+          </div>
+
+          <div class="social-icons">
+            <a href="https://www.facebook.com/wasikinggg"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://x.com/wasifhussain_x"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/itx_wasiii2501/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://youtube.com/@befikaryyaar?si=dmGd3KIXyyS2Ykfg"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="https://wa.me/923430106881"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Middle Section - Newsletter -->
+      <div class="footer-middle">
+        <div class="newsletter">
+          <h3>Subscribe to Newsletter</h3>
+          <p>Get updates on new products and special offers</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="footer-bottom">
+        <div class="payment-methods">
+          <span>We Accept:</span>
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-paypal"></i>
+          <i class="fas fa-money-bill-wave"></i>
+          <i class="fas fa-university"></i>
+        </div>
+
+        <div class="copyright">
+          <p>Copyright &copy; 2026 All Rights Reserved | E-commerce Website</p>
+        </div>
+
+        <div class="download-app">
+          <span>Download App:</span>
+          <a href="#"><i class="fab fa-google-play"></i></a>
+          <a href="#"><i id="appstr" class="fab fa-app-store"></i></a>
+        </div>
+      </div>
+
+      <!-- WhatsApp Float Button -->
+      <div class="whatsapp-float">
+        <a href="https://wa.me/923430106881" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- javascript -->
+
+    <script>
+      //ye profile icon pr click hony waly functionality ha
+      // ============ PROFILE FUNCTIONALITY ============
+
+      const profileicon = document.getElementById("profileicon");
+
+      // Profile modal create karne ka function
+      function createProfileModal() {
+        // Agar modal already hai to na banayein
+        if (document.getElementById("profileModal")) return;
+
+        // Modal HTML
+        const profileModal = document.createElement("div");
+        profileModal.className = "profile-modal";
+        profileModal.id = "profileModal";
+
+        profileModal.innerHTML = `
+        <div class="profile-content">
+            <!-- Profile Info Display -->
+            <div class="profile-info-display" id="profileInfoDisplay">
+                <div class="profile-pic-container">
+                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" 
+                         alt="Profile" 
+                         class="profile-pic" 
+                         id="displayProfilePic">
+                    <button class="upload-btn" id="changeProfilePic">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <div class="user-info">
+                    <h4 id="displayUserName">No Name</h4>
+                    <p id="displayUserEmail">No Email</p>
+                    <p id="displayUserPhone">No Phone</p>
+                </div>
+                <button class="profile-btn logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+
+            <!-- Profile Form -->
+            <div class="profile-form" id="profileForm">
+                <h3><i class="fas fa-user-plus"></i> Create Your Profile</h3>
+                
+                <div class="profile-form-group">
+                    <label for="profilePicUpload">Profile Picture</label>
+                    <input type="file" id="profilePicUpload" accept="image/jpeg,image/png,image/gif,image/webp,image/svg+xml,image/bmp">
+                    <small style="color: #666; font-size: 12px; display: block; margin-top: 5px;">Supports: JPG, PNG, GIF, WEBP, SVG, BMP</small>
+                    <img src="" alt="Preview" class="profile-preview" id="profilePreview" style="display: none;">
+                </div>
+                
+                <div class="profile-form-group">
+                    <label for="userName">Full Name</label>
+                    <input type="text" id="userName" placeholder="Enter your full name">
+                </div>
+                
+                <div class="profile-form-group">
+                    <label for="userEmail">Email Address</label>
+                    <input type="email" id="userEmail" placeholder="Enter your email">
+                </div>
+                
+                <div class="profile-form-group">
+                    <label for="userPhone">Phone Number</label>
+                    <input type="tel" id="userPhone" placeholder="Enter your phone number">
+                </div>
+                
+                <div class="profile-buttons">
+                    <button class="profile-btn save-profile" id="saveProfileBtn">
+                        <i class="fas fa-save"></i> Save Profile
+                    </button>
+                    <button class="profile-btn cancel-profile" id="cancelProfileBtn">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+
+        // Add to body
+        document.body.appendChild(profileModal);
+
+        // Add CSS
+        addProfileCSS();
+
+        // Setup event listeners
+        setupProfileListeners();
+      }
+
+      // CSS add karne ka function
+      function addProfileCSS() {
+        const style = document.createElement("style");
+        style.textContent = `
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .profile-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .profile-modal.active {
+            display: flex;
+        }
+        
+        .profile-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 2px solid rgb(11, 11, 40);
+            animation: modalSlideIn 0.3s ease;
+        }
+        
+        .profile-content * {
+            color: #333;
+        }
+        
+        .profile-pic-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+        
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgb(11, 11, 40);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+        
+        .upload-btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: rgb(11, 11, 40);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .upload-btn:hover {
+            background: rgb(30, 30, 70);
+            transform: scale(1.1);
+        }
+        
+        .profile-form-group {
+            margin-bottom: 15px;
+        }
+        
+        .profile-form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333 !important;
+        }
+        
+        .profile-form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            color: #333 !important;
+        }
+        
+        .profile-preview {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 10px auto;
+            display: block;
+            border: 2px solid #ddd;
+            transition: all 0.3s;
+        }
+        
+        .profile-preview:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .profile-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .profile-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .profile-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .save-profile {
+            background: rgb(11, 11, 40);
+            color: white;
+        }
+        
+        .cancel-profile {
+            background: #ddd;
+            color: #333;
+        }
+        
+        .logout-btn {
+            background: #ff4444;
+            color: white;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .profile-info-display {
+            display: none;
+        }
+        
+        /* File input styling */
+        #profilePicUpload {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
+        
+        #profilePicUpload::file-selector-button {
+            background: rgb(11, 11, 40);
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
+        
+        #profilePicUpload::file-selector-button:hover {
+            background: rgb(30, 30, 70);
+        }
+        
+        .profile-form h3 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgb(11, 11, 40);
+            color: rgb(11, 11, 40) !important;
+        }
+        
+        .user-info h4 {
+            color: rgb(11, 11, 40) !important;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+        
+        .user-info p {
+            color: #555 !important;
+            margin: 5px 0;
+        }
+        
+        /* Responsive for profile modal */
+        @media (max-width: 480px) {
+            .profile-content {
+                padding: 20px;
+            }
+            
+            .profile-pic-container {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .profile-preview {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    `;
+        document.head.appendChild(style);
+      }
+
+      // All event listeners setup karne ka function
+      function setupProfileListeners() {
+        // Save Profile Button
+        const saveBtn = document.getElementById("saveProfileBtn");
+        if (saveBtn) {
+          saveBtn.onclick = function () {
+            const name = document.getElementById("userName").value.trim();
+            const email = document.getElementById("userEmail").value.trim();
+            const phone = document.getElementById("userPhone").value.trim();
+            const picUpload = document.getElementById("profilePicUpload");
+            const profilePicFile = picUpload.files[0];
+
+            console.log("Save button clicked!");
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Phone:", phone);
+
+            if (!name || !email || !phone) {
+              alert("Please fill all fields!");
+              return;
+            }
+
+            // Create profile object
+            const profileData = {
+              name: name,
+              email: email,
+              phone: phone,
+              savedAt: new Date().toISOString(),
+            };
+
+            // If image is selected
+            if (profilePicFile) {
+              // Check if file is an image
+              if (!profilePicFile.type.startsWith("image/")) {
+                alert("Please select an image file (jpg, png, gif, etc.)");
+                return;
+              }
+
+              // Check file size (max 5MB)
+              if (profilePicFile.size > 5 * 1024 * 1024) {
+                alert("Image size should be less than 5MB");
+                return;
+              }
+
+              // Convert to base64
+              const reader = new FileReader();
+              reader.onload = function (e) {
+                profileData.profilePic = e.target.result;
+                saveProfileToStorage(profileData);
+              };
+              reader.readAsDataURL(profilePicFile);
+            } else {
+              // No image selected
+              saveProfileToStorage(profileData);
+            }
+          };
+        }
+
+        // Cancel Button
+        const cancelBtn = document.getElementById("cancelProfileBtn");
+        if (cancelBtn) {
+          cancelBtn.onclick = closeProfileModal;
+        }
+
+        // Logout Button
+        const logoutBtn = document.getElementById("logoutBtn");
+        if (logoutBtn) {
+          logoutBtn.onclick = function () {
+            if (confirm("Are you sure you want to logout?")) {
+              localStorage.removeItem("userProfile");
+              alert("Logged out!");
+              closeProfileModal();
+              updateProfileDisplay();
+            }
+          };
+        }
+
+        // Profile Picture Upload
+        const picUpload = document.getElementById("profilePicUpload");
+        if (picUpload) {
+          picUpload.onchange = function (e) {
+            const file = e.target.files[0];
+            if (file) {
+              // Check if file is an image
+              if (!file.type.startsWith("image/")) {
+                alert("Please select an image file (jpg, png, gif, etc.)");
+                this.value = ""; // Clear the input
+                return;
+              }
+
+              // Check file size
+              if (file.size > 5 * 1024 * 1024) {
+                alert("Image size should be less than 5MB");
+                this.value = ""; // Clear the input
+                return;
+              }
+
+              const reader = new FileReader();
+              reader.onload = function (e) {
+                const preview = document.getElementById("profilePreview");
+                if (preview) {
+                  preview.src = e.target.result;
+                  preview.style.display = "block";
+                  preview.style.opacity = "0.7";
+
+                  // Add loading effect
+                  setTimeout(() => {
+                    preview.style.opacity = "1";
+                  }, 300);
+                }
+              };
+              reader.readAsDataURL(file);
+            }
+          };
+        }
+
+        // Change Profile Picture Button - YAHAN FIX KIYA HAI
+        const changePicBtn = document.getElementById("changeProfilePic");
+        if (changePicBtn) {
+          changePicBtn.onclick = function () {
+            const fileInput = document.createElement("input");
+            fileInput.type = "file";
+            fileInput.accept =
+              "image/jpeg,image/png,image/gif,image/webp,image/svg+xml,image/bmp";
+            fileInput.onchange = function (e) {
+              const file = e.target.files[0];
+              if (file) {
+                // Check if file is an image
+                if (!file.type.startsWith("image/")) {
+                  alert("Please select an image file (jpg, png, gif, etc.)");
+                  return;
+                }
+
+                // Check file size
+                if (file.size > 5 * 1024 * 1024) {
+                  alert("Image size should be less than 5MB");
+                  return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                  // Save new profile picture
+                  const profile = JSON.parse(
+                    localStorage.getItem("userProfile") || "{}",
+                  );
+                  profile.profilePic = e.target.result;
+                  localStorage.setItem("userProfile", JSON.stringify(profile));
+
+                  // Update display immediately
+                  const displayPic =
+                    document.getElementById("displayProfilePic");
+                  displayPic.src = e.target.result;
+
+                  // Add animation effect
+                  displayPic.style.transform = "scale(1.1)";
+                  setTimeout(() => {
+                    displayPic.style.transform = "scale(1)";
+                  }, 300);
+
+                  alert("Profile picture updated successfully!");
+                };
+                reader.readAsDataURL(file);
+              }
+            };
+            fileInput.click();
+          };
+        }
+
+        // Close modal when clicking outside
+        const modal = document.getElementById("profileModal");
+        if (modal) {
+          modal.onclick = function (e) {
+            if (e.target === modal) {
+              closeProfileModal();
+            }
+          };
+        }
+      }
+
+      // Helper function to save profile
+      function saveProfileToStorage(profileData) {
+        localStorage.setItem("userProfile", JSON.stringify(profileData));
+        alert("Profile saved successfully!");
+        closeProfileModal();
+        updateProfileDisplay();
+      }
+
+      // Profile display update karne ka function
+      function updateProfileDisplay() {
+        const profile = JSON.parse(
+          localStorage.getItem("userProfile") || "null",
+        );
+
+        if (profile) {
+          // Show profile info
+          document.getElementById("profileForm").style.display = "none";
+          document.getElementById("profileInfoDisplay").style.display = "block";
+
+          // Update info
+          document.getElementById("displayUserName").textContent =
+            profile.name || "No Name";
+          document.getElementById("displayUserEmail").textContent =
+            profile.email || "No Email";
+          document.getElementById("displayUserPhone").textContent =
+            profile.phone || "No Phone";
+
+          if (profile.profilePic) {
+            document.getElementById("displayProfilePic").src =
+              profile.profilePic;
+          }
+        } else {
+          // Show form
+          document.getElementById("profileForm").style.display = "block";
+          document.getElementById("profileInfoDisplay").style.display = "none";
+
+          // Clear preview
+          document.getElementById("profilePreview").style.display = "none";
+          document.getElementById("profilePicUpload").value = "";
+        }
+      }
+
+      // Modal open karne ka function
+      function openProfileModal() {
+        // Create modal if not exists
+        if (!document.getElementById("profileModal")) {
+          createProfileModal();
+        }
+
+        // Update display
+        updateProfileDisplay();
+
+        // Show modal
+        document.getElementById("profileModal").classList.add("active");
+      }
+
+      // Modal close karne ka function
+      function closeProfileModal() {
+        const modal = document.getElementById("profileModal");
+        if (modal) {
+          modal.classList.remove("active");
+        }
+      }
+
+      // Profile icon click event
+      profileicon.onclick = function (e) {
+        e.stopPropagation();
+        openProfileModal();
+      };
+
+      // ESC key se close
+      document.onkeydown = function (e) {
+        if (e.key === "Escape") {
+          closeProfileModal();
+        }
+      };
+
+      // Page load pe initialize
+      document.addEventListener("DOMContentLoaded", function () {
+        // Modal create karein
+        createProfileModal();
+
+        // Test ke liye
+        console.log("Profile functionality loaded!");
+      });
+
+      // ============ ye hai dark theme btn functionality====== ======
+
+      const hearticon = document.getElementById("hearticon");
+      const body = document.body;
+
+      // localStorage k andr set ki hoy key value ko get krty hoy
+      const savedTheme = localStorage.getItem("theme");
+
+      // classlist add kr rhy jo k css text m likhy hoy h
+      if (savedTheme === "dark") {
+        body.classList.add("darkcheck");
+        body.classList.remove("lightcheck");
+        body.style.backgroundColor = "rgb(11, 11, 40)";
+        body.style.color = "white";
+      } else {
+        body.classList.add("lightcheck");
+        body.classList.remove("darkcheck");
+        body.style.backgroundColor = "white";
+        body.style.color = "rgb(11, 11, 40)";
+      }
+
+      // Theme toggle function
+      hearticon.addEventListener("click", function () {
+        if (body.classList.contains("lightcheck")) {
+          // Switch to dark mode
+          body.classList.remove("lightcheck");
+          body.classList.add("darkcheck");
+          body.style.backgroundColor = "rgb(11, 11, 40)";
+          body.style.color = "white";
+
+          // Save to localStorage
+          localStorage.setItem("theme", "dark");
+
+          // Show notification
+          showNotification("Dark Mode Activated");
+        } else {
+          // Switch to light mode
+          body.classList.remove("darkcheck");
+          body.classList.add("lightcheck");
+          body.style.backgroundColor = "white";
+          body.style.color = "rgb(11, 11, 40)";
+
+          // Save to localStorage
+          localStorage.setItem("theme", "light");
+
+          // Show notification
+          showNotification("Light Mode Activated");
+        }
+      });
+
+      // Add CSS for smooth transition
+      const themeStyle = document.createElement("style");
+      themeStyle.textContent = `
+    body {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .lightcheck {
+        background-color: white !important;
+        color: rgb(11, 11, 40) !important;
+    }
+    
+    .darkcheck {
+        background-color: rgb(11, 11, 40) !important;
+        color: white !important;
+    }
+    
+    /* Header adjustments for dark mode */
+    .darkcheck .firstdiv {
+        background-color: rgb(10, 10, 35) !important;
+        //  border-bottom: groove;
+        //  border:1px lite white;
+        
+    }
+    
+    .darkcheck #setticon,
+    .darkcheck #profileicon,
+    .darkcheck #carticon,
+    .darkcheck #hearticon,
+    .darkcheck #srchicon {
+        background-color: rgb(10, 10, 35) !important;
+        transition:0.4s;
+    }
+
+     .darkcheck #setticon:hover,
+    .darkcheck #profileicon:hover,
+    .darkcheck #carticon:hover,
+    .darkcheck #hearticon:hover,
+    .darkcheck #srchicon:hover {
+        background-color: white !important;
+        color:rgb(10, 10, 35) !important;
+        transition:0.4s;
+    }
+
+
+
+
+
+    
+    /* Product card adjustments for dark mode */
+    .darkcheck .column {
+        background: white !important;
+        color: rgb(11, 11, 40) !important;
+         transition: 0.5s;
+    }
+        .darkcheck .column:hover {
+        box-shadow: 0 4px 20px rgb(173, 241, 243);
+             transition: 0.5s;
+        }
+
+        .darkcheck .columnElement {
+           border:5px solid white;
+        
+        }
+
+    
+
+    
+    .darkcheck .column h3,
+    .darkcheck .column p {
+        color: rgb(11, 11, 40) !important;
+    }
+    
+    .darkcheck .product-price {
+        color: white !important;
+        background: rgb(11, 11, 40) !important;
+    }
+    
+    .darkcheck .cartbtn {
+        background-color: rgb(11, 11, 40) !important;
+        color: white !important;
+    }
+    
+    /* Footer adjustments for dark mode */
+    .darkcheck .footer {
+        background: rgb(10, 10, 35) !important;
+    }
+    
+    /* Filter modal adjustments */
+    .darkcheck .filter-content {
+        background: #333 !important;
+        color: white !important;
+    }
+    
+    .darkcheck .filter-option label {
+        color: white !important;
+    }
+    
+    /* Cart sidebar adjustments */
+    .darkcheck .cart-sidebar {
+        background: #222 !important;
+        color: white !important;
+    }
+    
+    .darkcheck .cart-item-title,
+    .darkcheck .cart-item-price {
+        color: white !important;
+    }
+
+    .darkcheck .quantity-value{
+    color:rgb(11, 11, 40);
+    }
+
+    .darkcheck .cart-footer {
+    background-color:rgb(11, 11, 40);
+    border-top:none;
+    }
+
+    .darkcheck .checkout-btn{
+       background: rgb(11, 11, 40);
+    }
+
+    .darkcheck .filter-modal h3 {
+       color:rgb(11, 11, 40);
+    }
+
+    .darkcheck .filter-modal label{
+    color:rgb(11, 11, 40) !important;
+    }
+
+     .darkcheck .filter-modal .filter-content{
+     background:white !important;
+     }
+
+
+
+
+
+    
+
+
+`;
+      document.head.appendChild(themeStyle);
+
+      // ============ FILTER FUNCTIONALITY ============
+
+      // DOM Elements for Filter
+      const setticon = document.getElementById("setticon");
+      const filterModal = document.getElementById("filterModal");
+      const applyFilterBtn = document.getElementById("applyFilter");
+      const clearFilterBtn = document.getElementById("clearFilter");
+      const resetFilterBtn = document.getElementById("resetFilterBtn");
+      const allProductsOption = document.getElementById("allProductsOption");
+      const below60Option = document.getElementById("below60Option");
+      const above60Option = document.getElementById("above60Option");
+      const filterRadios = document.querySelectorAll('input[name="filter"]');
+
+      // Store all products for resetting
+      let allProducts = [];
+
+      // Initialize - Store all products
+      document.addEventListener("DOMContentLoaded", function () {
+        const columns = document.querySelectorAll(".column");
+        columns.forEach((column) => {
+          allProducts.push(column.cloneNode(true));
+        });
+
+        // Add blur effect to filter modal
+        const style = document.createElement("style");
+        style.textContent = `
+    @keyframes modalSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    #filterModal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: 9998;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+    }
+    
+    #filterModal.active {
+      display: flex;
+    }
+
+   
+
+
+    
+    .filter-options-container {
+      background: white !important;
+      border: 2px solid rgb(11, 11, 40) !important;
+      border-radius: 15px !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+      animation: modalSlideIn 0.3s ease !important;
+    }
+    
+    .filter-options-container * {
+      color: #333 !important;
+    }
+    
+    .filter-header h3 {
+      color: rgb(11, 11, 40) !important;
+    }
+    
+    .filter-option {
+      background-color: #f9f9f9 !important;
+      border: 1px solid #aaa !important;
+    }
+    
+    .filter-option.active {
+      background-color: rgba(11, 11, 40, 0.1) !important;
+      border-color: rgb(11, 11, 40) !important;
+    }
+    
+    .filter-option label {
+      color: #333 !important;
+    }
+    
+    .filter-option input[type="radio"] {
+      accent-color: rgb(11, 11, 40);
+    }
+    
+    .filter-buttons button {
+      border: 1px solid rgba(0,0,0,0.1) !important;
+    }
+    
+    .apply-filter {
+      background-color: rgb(11, 11, 40) !important;
+      color: white !important;
+    }
+    
+    .clear-filter {
+      background-color: #ddd !important;
+      color: #333 !important;
+    }
+  `;
+        document.head.appendChild(style);
+      });
+
+      // Open Filter Modal
+      setticon.addEventListener("click", function (e) {
+        e.stopPropagation();
+        filterModal.classList.add("active");
+      });
+
+      // Close Filter Modal when clicking outside
+      filterModal.addEventListener("click", function (e) {
+        if (e.target === filterModal) {
+          filterModal.classList.remove("active");
+        }
+      });
+
+      // Close Filter Modal with ESC key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && filterModal.classList.contains("active")) {
+          filterModal.classList.remove("active");
+        }
+      });
+
+      // Filter Option Click Events
+      allProductsOption.addEventListener("click", function () {
+        document.getElementById("all").checked = true;
+        updateFilterOptions();
+      });
+
+      below60Option.addEventListener("click", function () {
+        document.getElementById("below60").checked = true;
+        updateFilterOptions();
+      });
+
+      above60Option.addEventListener("click", function () {
+        document.getElementById("above60").checked = true;
+        updateFilterOptions();
+      });
+
+      // Update filter option styling
+      function updateFilterOptions() {
+        const options = document.querySelectorAll(".filter-option");
+        options.forEach((option) => {
+          option.classList.remove("active");
+          const radio = option.querySelector('input[type="radio"]');
+          if (radio.checked) {
+            option.classList.add("active");
+          }
+        });
+      }
+
+      // Apply Filter
+      applyFilterBtn.addEventListener("click", function () {
+        const selectedFilter = document.querySelector(
+          'input[name="filter"]:checked',
+        ).value;
+        applyFilter(selectedFilter);
+        filterModal.classList.remove("active");
+        resetFilterBtn.style.display = "inline-block";
+      });
+
+      // Clear Filter
+      clearFilterBtn.addEventListener("click", function () {
+        filterRadios.forEach((radio) => {
+          if (radio.value === "all") {
+            radio.checked = true;
+          }
+        });
+        updateFilterOptions();
+        filterModal.classList.remove("active");
+      });
+
+      // Reset Filter Button
+      resetFilterBtn.addEventListener("click", function () {
+        applyFilter("all");
+        resetFilterBtn.style.display = "none";
+      });
+
+      // Filter Function
+      function applyFilter(filterType) {
+        const columns = document.querySelectorAll(".column");
+        const mainContainers = document.querySelectorAll(".main-container");
+
+        // Remove whitespace by hiding empty containers
+        mainContainers.forEach((container) => {
+          container.style.display = "flex";
+        });
+
+        let hasVisibleProducts = false;
+
+        columns.forEach((column) => {
+          const price = parseFloat(column.getAttribute("data-price"));
+          column.style.display = "flex";
+
+          switch (filterType) {
+            case "below60":
+              if (price < 60) {
+                column.style.display = "flex";
+                hasVisibleProducts = true;
+              } else {
+                column.style.display = "none";
+              }
+              break;
+
+            case "above60":
+              if (price >= 60) {
+                column.style.display = "flex";
+                hasVisibleProducts = true;
+              } else {
+                column.style.display = "none";
+              }
+              break;
+
+            case "all":
+              column.style.display = "flex";
+              hasVisibleProducts = true;
+              break;
+          }
+        });
+
+        // Hide empty containers to remove whitespace
+        mainContainers.forEach((container) => {
+          const visibleColumns = container.querySelectorAll(
+            '.column[style*="display: flex"]',
+          );
+          if (visibleColumns.length === 0) {
+            container.style.display = "none";
+          } else {
+            container.style.display = "flex";
+          }
+        });
+
+        // Show notification
+        showNotification(`Filter applied: ${getFilterText(filterType)}`);
+      }
+
+      // Get filter text for notification
+      function getFilterText(filterType) {
+        switch (filterType) {
+          case "below60":
+            return "Prices below $60";
+          case "above60":
+            return "Prices above $60";
+          case "all":
+            return "All Products";
+          default:
+            return "All Products";
+        }
+      }
+
+      // Initialize filter options
+      updateFilterOptions();
+
+      // ============ SEARCH FUNCTIONALITY ============
+
+      // Step 1: Get input element
+      let input = document.getElementById("int");
+
+      // Step 2: Create suggestions container
+      let suggestionsDiv = document.createElement("div");
+      suggestionsDiv.id = "suggestionsContainer";
+      function setResponsiveStyles() {
+        const screenWidth = window.innerWidth;
+
+        let width = 385;
+        let marginLeft = 33;
+        let marginTop = 0;
+
+        // Apply different styles based on screen width
+
+        if (screenWidth <= 1496) {
+          width = 388;
+          marginLeft = 30;
+        }
+        if (screenWidth <= 1024) {
+          width = 336;
+          marginLeft = 30;
+        }
+        if (screenWidth <= 768) {
+          width = 415;
+          marginLeft = 20;
+        }
+        if (screenWidth <= 712) {
+          width = 270;
+          marginLeft = 18;
+        }
+        if (screenWidth <= 632) {
+          width = 230;
+          marginLeft = -40;
+          marginTop = 300;
+        }
+        if (screenWidth <= 467) {
+          width = 200;
+          marginLeft = -40;
+        }
+        if (screenWidth <= 447) {
+          width = 100;
+          marginLeft = 10;
+        }
+
+        if (screenWidth <= 442) {
+          width = 170;
+          marginLeft = -20;
+        }
+
+        if (screenWidth <= 381) {
+          width = 130;
+          marginLeft = -20;
+        }
+
+        // ✅ SAHI SYNTAX:
+        suggestionsDiv.style.position = "absolute";
+        suggestionsDiv.style.background = "white";
+        suggestionsDiv.style.color = "rgb(11, 11, 40)";
+        suggestionsDiv.style.border = "1px solid #ddd";
+        suggestionsDiv.style.borderRadius = "5px";
+        suggestionsDiv.style.maxHeight = "250px";
+        suggestionsDiv.style.overflowY = "auto";
+        suggestionsDiv.style.display = "none";
+        suggestionsDiv.style.zIndex = "1000";
+        suggestionsDiv.style.width = width + "px";
+        suggestionsDiv.style.marginTop = marginTop + "px";
+        suggestionsDiv.style.marginLeft = marginLeft + "px";
+        suggestionsDiv.style.boxShadow = "0 4px 12px rgba(0,0,0,0.1)";
+        suggestionsDiv.style.fontFamily = "Arial, sans-serif";
+        suggestionsDiv.style.msOverflowStyle = "none";
+        suggestionsDiv.style.scrollbarWidth = "none";
+      }
+
+      setResponsiveStyles();
+
+      window.addEventListener("resize", setResponsiveStyles);
+
+      // Add suggestions container after searchbar
+      document.getElementById("searchbar").appendChild(suggestionsDiv);
+
+      // Step 3: Products array (matching your products)
+      const products = [
+        "Men's Shoe",
+        "Men's Shirt",
+        "Men's Watch",
+        "Men's Jacket",
+        "Men's Cap",
+        "Men's Perfume",
+        "Women's Shoe",
+        "Women's Shirt",
+        "Women's Watch",
+        "Women's Jacket",
+        "Women's Cap",
+        "Women's Perfume",
+      ];
+
+      // Step 4: Input event listener
+      input.addEventListener("input", function () {
+        const searchText = this.value.trim().toLowerCase();
+
+        // Clear previous suggestions
+        suggestionsDiv.innerHTML = "";
+
+        // Hide if empty
+        if (searchText.length === 0) {
+          suggestionsDiv.style.display = "none";
+          return;
+        }
+
+        // Filter matching products
+        const filteredProducts = products.filter((item) =>
+          item.toLowerCase().includes(searchText),
+        );
+
+        // Show suggestions if matches found
+        if (filteredProducts.length > 0) {
+          suggestionsDiv.style.display = "block";
+
+          filteredProducts.forEach((product) => {
+            const suggestionItem = document.createElement("div");
+            suggestionItem.textContent = product;
+            suggestionItem.style.cssText = `
+                          padding: 12px 15px;
+                          cursor: pointer;
+                          border-bottom: 1px solid #eee;
+                          transition: background 0.2s;
+                          font-size: 14px;
+                      `;
+
+            // Hover effect
+            suggestionItem.addEventListener("mouseenter", function () {
+              this.style.background = "#f5f5f5";
+            });
+            suggestionItem.addEventListener("mouseleave", function () {
+              this.style.background = "white";
+            });
+
+            // Click event
+            suggestionItem.addEventListener("click", function () {
+              input.value = this.textContent;
+              suggestionsDiv.style.display = "none";
+              highlightProduct(this.textContent);
+            });
+
+            suggestionsDiv.appendChild(suggestionItem);
+          });
+        } else {
+          suggestionsDiv.style.display = "none";
+        }
+      });
+
+      // Step 5: Function to highlight product
+      function highlightProduct(productName) {
+        // Remove previous highlights
+        const allColumns = document.querySelectorAll(".column");
+        allColumns.forEach((col) => {
+          col.style.border = "none";
+        });
+
+        // Find the matching column ID
+        let targetColumn = null;
+
+        if (productName === "Men's Shoe") targetColumn = "clm1";
+        else if (productName === "Men's Shirt") targetColumn = "clm2";
+        else if (productName === "Men's Watch") targetColumn = "clm3";
+        else if (productName === "Men's Jacket") targetColumn = "clm4";
+        else if (productName === "Men's Cap") targetColumn = "clm5";
+        else if (productName === "Men's Perfume") targetColumn = "clm6";
+        else if (productName === "Women's Shoe") targetColumn = "clm7";
+        else if (productName === "Women's Shirt") targetColumn = "clm8";
+        else if (productName === "Women's Watch") targetColumn = "clm9";
+        else if (productName === "Women's Jacket") targetColumn = "clm10";
+        else if (productName === "Women's Cap") targetColumn = "clm11";
+        else if (productName === "Women's Perfume") targetColumn = "clm12";
+
+        // Apply yellow border for 3 seconds
+        if (targetColumn) {
+          const columnElement = document.getElementById(targetColumn);
+          if (columnElement) {
+            if (body.classList.contains("darkcheck")) {
+              // columnElement.style.border = "7px solid white";
+              columnElement.style.boxShadow = "0 4px 20px rgb(173, 241, 267)";
+            } else {
+              columnElement.style.boxShadow = " 0 10px 25px rgb(4, 4, 80)";
+            }
+
+            // columnElement.style.border = "5px solid rgb(11, 11, 40)";
+            columnElement.style.borderRadius = "12px";
+            columnElement.style.boxSizing = "border-box";
+
+            // Scroll to the product
+            columnElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+
+            // Remove border after 3 seconds
+            setTimeout(() => {
+              columnElement.style.border = "none";
+              columnElement.style.boxShadow = "none";
+              columnElement.style.transitionBehavior = "smooth";
+            }, 4000);
+          }
+        }
+      }
+
+      // Step 6: Search icon click event
+      document
+        .getElementById("srchicon")
+        .addEventListener("click", function () {
+          const searchText = input.value.trim();
+
+          // Check if searchText exists in products array
+          const productExists = products.some(
+            (product) => product.toLowerCase() === searchText.toLowerCase(),
+          );
+
+          if (searchText.length > 0) {
+            suggestionsDiv.style.display = "none";
+
+            if (productExists) {
+              // If product exists, highlight it
+              highlightProduct(searchText);
+            } else {
+              // If product doesn't exist, show alert
+              alert("SORRY! Product not found!");
+              input.value = "";
+              return;
+            }
+          }
+        });
+
+      // Step 7: Enter key support
+      input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          const searchText = input.value.trim();
+          if (searchText.length > 0) {
+            suggestionsDiv.style.display = "none";
+            highlightProduct(searchText);
+          }
+        }
+      });
+
+      // Step 8: Hide suggestions when clicking outside
+      document.addEventListener("click", function (event) {
+        if (
+          !input.contains(event.target) &&
+          !suggestionsDiv.contains(event.target)
+        ) {
+          suggestionsDiv.style.display = "none";
+        }
+      });
+
+      // ============ CART FUNCTIONALITY ============
+
+      // Cart Data Structure
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      // Product Prices
+      const productPrices = {
+        "Men's Shoe": 59.99,
+        "Men's Shirt": 29.99,
+        "Men's Watch": 129.99,
+        "Men's Jacket": 79.99,
+        "Men's Cap": 19.99,
+        "Men's Perfume": 49.99,
+        "Women's Shoe": 69.99,
+        "Women's Shirt": 34.99,
+        "Women's Watch": 149.99,
+        "Women's Jacket": 89.99,
+        "Women's Cap": 24.99,
+        "Women's Perfume": 54.99,
+      };
+
+      // Product Images
+      const productImages = {
+        "Men's Shoe": "images/men's shoes.jpg",
+        "Men's Shirt": "images/men's shirt.webp",
+        "Men's Watch": "images/men's watch.webp",
+        "Men's Jacket": "images/Men's Leather Jacket.jpg",
+        "Men's Cap": "images/men's cap.jpg",
+        "Men's Perfume": "images/men's perfume.jpg",
+        "Women's Shoe": "images/women shoes.jpg",
+        "Women's Shirt": "images/women clothing.webp",
+        "Women's Watch": "images/women watch.webp",
+        "Women's Jacket": "images/women jacket.jpg",
+        "Women's Cap": "images/women cp.jpeg",
+        "Women's Perfume": "images/women perfume.webp",
+      };
+
+      // DOM Elements
+      const cartbtn = document.getElementById("carticon");
+      const cartSidebar = document.getElementById("cartSidebar");
+      const cartOverlay = document.getElementById("cartOverlay");
+      const closeCartBtn = document.getElementById("closeCart");
+      const cartItemsContainer = document.getElementById("cartItems");
+      const emptyCartMsg = document.getElementById("emptyCart");
+      const totalPriceElement = document.getElementById("totalPrice");
+      const checkoutBtn = document.getElementById("checkoutBtn");
+
+      // Toggle Cart Sidebar
+      cartbtn.addEventListener("click", toggleCart);
+      closeCartBtn.addEventListener("click", toggleCart);
+      cartOverlay.addEventListener("click", toggleCart);
+
+      function toggleCart() {
+        cartSidebar.classList.toggle("active");
+        cartOverlay.classList.toggle("active");
+      }
+
+      // Add to Cart Functionality - UPDATED SELECTOR
+      document.querySelectorAll(".cartbtn").forEach((button) => {
+        button.addEventListener("click", function () {
+          const column = this.closest(".column");
+          const titleElement = column.querySelector("h3");
+          const productName = titleElement.textContent;
+
+          if (this.textContent === "Add To Cart") {
+            addToCart(productName);
+          } else if (this.textContent === "Buy Now") {
+            buyNowDirect(productName);
+          }
+        });
+      });
+
+      function addToCart(productName) {
+        // Check if product already in cart
+        const existingItem = cart.find((item) => item.name === productName);
+
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push({
+            name: productName,
+            price: productPrices[productName] || 0,
+            image: productImages[productName] || "default.jpg",
+            quantity: 1,
+          });
+        }
+
+        // Save to localStorage
+        saveCart();
+
+        // Update cart display
+        updateCartDisplay();
+
+        // Show cart sidebar
+        cartSidebar.classList.add("active");
+        cartOverlay.classList.add("active");
+
+        // Show confirmation
+        showNotification(`${productName} added to cart!`);
+      }
+
+      // Direct Buy Now function
+      function buyNowDirect(productName) {
+        const price = productPrices[productName] || 0;
+        const confirmBuy = confirm(
+          `Buy "${productName}" for $${price.toFixed(2)}?\n\nClick OK to proceed to payment.`,
+        );
+
+        if (confirmBuy) {
+          alert("Redirecting to payment gateway...");
+          showNotification(`Purchased: ${productName}`);
+        }
+      }
+
+      // Save cart to localStorage
+      function saveCart() {
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+
+      // Update cart display
+      function updateCartDisplay() {
+        cartItemsContainer.innerHTML = "";
+
+        if (cart.length === 0) {
+          emptyCartMsg.style.display = "block";
+          cartItemsContainer.appendChild(emptyCartMsg);
+          checkoutBtn.style.display = "none";
+        } else {
+          emptyCartMsg.style.display = "none";
+          checkoutBtn.style.display = "block";
+
+          let total = 0;
+
+          cart.forEach((item, index) => {
+            total += item.price * item.quantity;
+
+            const cartItem = document.createElement("div");
+            cartItem.className = "cart-item";
+            cartItem.innerHTML = `
+              <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+              <div class="cart-item-details">
+                <div class="cart-item-title">${item.name}</div>
+                <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+                <div class="cart-item-actions">
+                  <div class="quantity-control">
+                    <button class="quantity-btn minus" data-index="${index}">-</button>
+                    <span class="quantity-value">${item.quantity}</span>
+                    <button class="quantity-btn plus" data-index="${index}">+</button>
+                  </div>
+                  <button class="delete-item" data-index="${index}">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                  <button class="buy-now-btn" data-index="${index}">Buy Now</button>
+                </div>
+              </div>
+            `;
+
+            cartItemsContainer.appendChild(cartItem);
+          });
+
+          // Add event listeners to new buttons
+          document.querySelectorAll(".quantity-btn.minus").forEach((btn) => {
+            btn.addEventListener("click", function () {
+              updateQuantity(parseInt(this.dataset.index), -1);
+            });
+          });
+
+          document.querySelectorAll(".quantity-btn.plus").forEach((btn) => {
+            btn.addEventListener("click", function () {
+              updateQuantity(parseInt(this.dataset.index), 1);
+            });
+          });
+
+          document.querySelectorAll(".delete-item").forEach((btn) => {
+            btn.addEventListener("click", function () {
+              removeFromCart(parseInt(this.dataset.index));
+            });
+          });
+
+          document.querySelectorAll(".buy-now-btn").forEach((btn) => {
+            btn.addEventListener("click", function () {
+              buyNow(parseInt(this.dataset.index));
+            });
+          });
+        }
+
+        // Update total
+        totalPriceElement.textContent = `$${total.toFixed(2)}`;
+      }
+
+      // Update quantity
+      function updateQuantity(index, change) {
+        cart[index].quantity += change;
+
+        if (cart[index].quantity <= 0) {
+          cart.splice(index, 1);
+        }
+
+        saveCart();
+        updateCartDisplay();
+      }
+
+      // Remove item from cart
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        saveCart();
+        updateCartDisplay();
+        showNotification("Item removed from cart");
+      }
+
+      // Buy Now function from cart
+      function buyNow(index) {
+        const item = cart[index];
+        alert(
+          `Buying: ${item.quantity}x ${item.name}\nTotal: $${(item.price * item.quantity).toFixed(2)}`,
+        );
+
+        // Remove item after purchase
+        cart.splice(index, 1);
+        saveCart();
+        updateCartDisplay();
+      }
+
+      // Checkout function
+      checkoutBtn.addEventListener("click", function () {
+        if (cart.length === 0) {
+          alert("Your cart is empty!");
+          return;
+        }
+
+        const total = cart.reduce(
+          (sum, item) => sum + item.price * item.quantity,
+          0,
+        );
+        const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+        const confirmCheckout = confirm(
+          `Checkout ${itemCount} items for $${total.toFixed(2)}?\n\nClick OK to proceed to payment.`,
+        );
+
+        if (confirmCheckout) {
+          alert("Redirecting to payment gateway...");
+          // Clear cart after checkout
+          cart = [];
+          saveCart();
+          updateCartDisplay();
+          toggleCart();
+        }
+      });
+
+      // Notification function
+      function showNotification(message) {
+        const notification = document.createElement("div");
+        notification.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #27ae60;
+          color: white;
+          padding: 15px 20px;
+          border-radius: 5px;
+          z-index: 2000;
+          animation: slideIn 0.3s ease;
+          font-family: Arial, sans-serif;
+        `;
+
+        notification.textContent = message;
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+          notification.style.animation = "slideOut 0.3s ease";
+          setTimeout(() => notification.remove(), 300);
+        }, 2000);
+      }
+
+      // Add CSS animations
+      const style = document.createElement("style");
+      style.textContent = `
+        @keyframes slideIn {
+          from { transform: translateX(100%); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideOut {
+          from { transform: translateX(0); opacity: 1; }
+          to { transform: translateX(100%); opacity: 0; }
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Initialize cart display on page load
+      updateCartDisplay();
+
+      // Make sure cart icon in header is visible
+      document.getElementById("carticon").style.cursor = "pointer";
+
+      // Add cart badge for item count
+      function updateCartBadge() {
+        const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+        let badge = document.querySelector(".cart-badge");
+
+        if (!badge) {
+          badge = document.createElement("span");
+          badge.className = "cart-badge";
+          badge.style.cssText = `
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff4444;
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          `;
+          document.getElementById("carticon").style.position = "relative";
+          document.getElementById("carticon").appendChild(badge);
+        }
+
+        badge.textContent = itemCount;
+        badge.style.display = itemCount > 0 ? "flex" : "none";
+      }
+
+      // Update badge whenever cart changes
+      const originalUpdateCartDisplay = updateCartDisplay;
+      updateCartDisplay = function () {
+        originalUpdateCartDisplay();
+        updateCartBadge();
+      };
+
+      // Initial badge update
+      updateCartBadge();
+    </script>
+  </body>
+</html>
